@@ -93,7 +93,8 @@ function deleteItem(e) {
     let filtered = final.filter((e) => {
       return e.code != li.id;
     });
-    localStorage.setItem("finalChecks", JSON.stringify(filtered));
+    final = filtered;
+    localStorage.setItem("finalChecks", JSON.stringify(final);
     if (li.classList.contains("plus")) {
       let valPlus = li.textContent.split(" ").filter((e) => e[0] == "$");
       let totPlus = Number(valPlus[valPlus.length - 1].replace(/[^0-9]/g, ""));
